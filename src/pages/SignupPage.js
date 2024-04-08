@@ -1,27 +1,24 @@
 import React from "react";
 import "./SignupPage.css";
 import { useState } from "react";
+import { navigate, useNavigate } from "react-router-dom";
 
 const Signuppage = () => {
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = () => {
-    console.log("Closing modal");
     setShowModal(false);
   };
 
-  // Function to handle opening modal
   const openModal = () => {
-    console.log("Opening modal");
     setShowModal(true);
   };
 
-  // Function to handle form submission (submit action not implemented)
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted");
-    // Add form submission logic here
-    closeModal(); // Close modal after form submission (replace this with your logic)
+    closeModal(); // Close modal after form submission
+    navigate("/");
   };
 
   return (
@@ -31,15 +28,36 @@ const Signuppage = () => {
       </button>
 
       {showModal && (
-        <div >
+        <div>
           <span onClick={closeModal} className="close" title="Close Modal">
             &times;
           </span>
-          <form onSubmit={handleSubmit} className="modal-content" >
+          <form onSubmit={handleSubmit} className="modal-content">
             <div className="container">
               <h1>Sign Up</h1>
               <p>Please fill in this form to create an account.</p>
               <hr />
+
+              <label htmlFor="name">
+                <b>Name</b>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter Name"
+                name="name"
+                required
+              />
+
+              <label htmlFor="contact">
+                <b>Contact</b>
+              </label>
+              <input
+                type="number"
+                placeholder="Enter contact number"
+                name="contact"
+                required
+              />
+
               <label htmlFor="email">
                 <b>Email</b>
               </label>
@@ -49,6 +67,21 @@ const Signuppage = () => {
                 name="email"
                 required
               />
+
+              {/* <label htmlFor="city">
+                <b>city</b>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter city"
+                name="city"
+                required
+              /> */}
+
+              <label htmlFor="dob">
+                <b>Date of Birth</b>
+              </label>
+              <input type="date" placeholder="Enter DOB" name="dob" required />
 
               <label htmlFor="psw">
                 <b>Password</b>
@@ -60,29 +93,19 @@ const Signuppage = () => {
                 required
               />
 
-              <label htmlFor="psw-repeat">
-                <b>Repeat Password</b>
-              </label>
-              <input
-                type="password"
-                placeholder="Repeat Password"
-                name="psw-repeat"
-                required
-              />
-
               <label>
                 <input
                   type="checkbox"
                   defaultChecked
                   name="remember"
-                  style={{ marginBottom: "15px" }}
+                  style={{ marginBottom: "10px" }}
                 />{" "}
                 Remember me
               </label>
 
               <p>
                 By creating an account you agree to our{" "}
-                <a href="#" style={{ color: "dodgerblue" }}>
+                <a href="#" style={{ color: "#385898" }}>
                   Terms & Privacy
                 </a>
                 .
@@ -103,7 +126,7 @@ const Signuppage = () => {
             </div>
           </form>
         </div>
-       )} 
+      )}
     </div>
   );
 };

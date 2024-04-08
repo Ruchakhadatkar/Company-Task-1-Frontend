@@ -1,7 +1,14 @@
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
 
-input[type=text], input[type=password], input[type=number], input[type=date] {
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"] {
   width: 100%;
   padding: 12px;
   margin: 5px 0 22px 0;
@@ -9,23 +16,22 @@ input[type=text], input[type=password], input[type=number], input[type=date] {
   border: none;
   background-color: #f5f6f7;
   border-radius: 6px;
-
-
 }
 
-input[type=text]:focus, input[type=password]:focus,input[type=number]:focus, input[type=date]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
   /* background-color: #ddd; */
   /* background-color: #f1f1f1; */
   background-color: #f5f6f7;
-
-
 
   outline: 1px solid gray;
   border-radius: 6px;
 }
 
 button {
-  background-color: 	#1877F2;
+  background-color: #1877f2;
   border-radius: 6px;
   color: white;
   padding: 14px 20px;
@@ -38,18 +44,19 @@ button {
 }
 
 button:hover {
-  opacity:1;
+  opacity: 1;
 }
 
-.cancelbtn {
-  padding: 12px 20px;
+/* .cancelbtn {
+  padding: 11px 20px;
   background-color: #f44336;
-}
+} */
 
-.cancelbtn, .signupbtn {
+
+.loginpbtn {
   float: left;
-  width: 46%;
-  padding: 12px 20px;
+  width: 100%;
+  padding: 11px 20px;
 }
 
 .container {
@@ -58,12 +65,12 @@ button:hover {
 
 .modal {
   display: none;
-  position: fixed; 
-  z-index: 1; 
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   overflow: auto;
   background-color: #474e5d;
   padding-top: 50px;
@@ -71,29 +78,28 @@ button:hover {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; 
+  margin: 5% auto 15% auto;
   /* border: 1px solid #888; */
   border-radius: 7px;
   box-shadow: 0 4px 8px 0 #58585833, 0 6px 20px 0 #e7e5e530;
   display: block;
   padding: 12px 46px 15px;
-  width: 53%;
-
+  width: 50%;
 }
-h1{
+h1 {
   font-size: 29px;
   font-weight: 600;
   margin-bottom: 2px;
 }
-p{
- color:  #606770;
+p {
+  color: #606770;
 }
 
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
- 
+
 .close {
   position: absolute;
   right: 35px;
@@ -106,14 +112,12 @@ hr {
 .close:hover,
 .close:focus {
   color: #ff4d30;
-   cursor: pointer;
+  cursor: pointer;
 }
 
-.cancelbtn{
-  margin-right: 18px;
+.cancelbtn {
+  margin-right: 20px;
 }
-
-
 
 .clearfix::after {
   content: "";
@@ -123,7 +127,8 @@ hr {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-     width: 100%;
+  .cancelbtn,
+  .loginpbtn {
+    width: 100%;
   }
 }
