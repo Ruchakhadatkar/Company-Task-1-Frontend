@@ -18,7 +18,7 @@ const Navbar = () => {
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <a class="navbar-brand" href="#">
-            Recipies
+            Pizza's
           </a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -32,8 +32,8 @@ const Navbar = () => {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">
-                Recipe
+              <a class="nav-link " href="#">
+                Category
               </a>
             </li>
           </ul>

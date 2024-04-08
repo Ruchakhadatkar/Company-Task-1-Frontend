@@ -3,36 +3,57 @@ import "./SignupPage.css";
 import { useState } from "react";
 import { navigate, useNavigate } from "react-router-dom";
 
-const Signuppage = () => {
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import validator from "validator";
+
+export const Signuppage = () => {
   const navigate = useNavigate();
-  const [showModal, setShowModal] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("")
+  const [contactNum, setContactNum] = useState("+91")
+  const indianPhoneNumberRegex = /^\+(91)[0-9]{10}$/; 
 
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  // const closeModal = () => {
+  //   setShowModal(false);
+  // };
 
-  const openModal = () => {
-    setShowModal(true);
-  };
+  // const openModal = () => {
+  //   setShowModal(true);
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    closeModal(); // Close modal after form submission
-    navigate("/");
+    if (!validator.isEmail(email)) {
+      toast.error("Email is invalid");
+      return;
+    }
+    if(!validator.isStrongPassword(password)){
+      toast.error("Password is not strong enough")
+      return
+    }
+    if (!indianPhoneNumberRegex.test(contactNum)) {
+      toast.error("Invalid Contact number");
+      return;
+  }
+
+    navigate("/home");
+    toast.success("Account create successfully!");
   };
 
   return (
     <div>
-      <button onClick={openModal} style={{ width: "auto" }}>
-        Sign Up
-      </button>
+      
 
-      {showModal && (
         <div>
-          <span onClick={closeModal} className="close" title="Close Modal">
-            &times;
-          </span>
-          <form onSubmit={handleSubmit} className="modal-content">
+          
+          <form
+            onSubmit={(e) => {
+              handleSubmit(e);
+            }}
+            className="modal-content"
+          >
             <div className="container">
               <h1>Sign Up</h1>
               <p>Please fill in this form to create an account.</p>
@@ -52,9 +73,11 @@ const Signuppage = () => {
                 <b>Contact</b>
               </label>
               <input
-                type="number"
+              onChange={(e)=>{setContactNum(e.target.value)}}
+                type="text"
                 placeholder="Enter contact number"
                 name="contact"
+                value={contactNum}
                 required
               />
 
@@ -62,6 +85,9 @@ const Signuppage = () => {
                 <b>Email</b>
               </label>
               <input
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 type="text"
                 placeholder="Enter Email"
                 name="email"
@@ -87,6 +113,7 @@ const Signuppage = () => {
                 <b>Password</b>
               </label>
               <input
+              onChange={(e)=>{setPassword(e.target.value)}}
                 type="password"
                 placeholder="Enter Password"
                 name="psw"
@@ -114,7 +141,7 @@ const Signuppage = () => {
               <div className="clearfix">
                 <button
                   type="button"
-                  onClick={closeModal}
+                  // onClick={closeModal}
                   className="cancelbtn"
                 >
                   Cancel
@@ -126,9 +153,20 @@ const Signuppage = () => {
             </div>
           </form>
         </div>
-      )}
+      
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 };
 
-export default Signuppage;
