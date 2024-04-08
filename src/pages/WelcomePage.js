@@ -7,7 +7,7 @@ const WelcomePage = () => {
   const [isShow, setIsShow] = useState(null);
 
   return (
-    <div className="imgContainer" style={{ width: "100vw", height: "100%" }}>
+    <div className="imgContainer">
       <div className="forms-modal ">
         {isShow ? <Signuppage /> : isShow == null ? <></> : <LoginPage />}
         <div
