@@ -1,4 +1,6 @@
-
+.main-form {
+  padding-top: 10rem;
+}
 input[type="text"],
 input[type="password"],
 input[type="number"],
@@ -46,7 +48,6 @@ button:hover {
   background-color: #f44336;
 } */
 
-
 .loginpbtn {
   float: left;
   width: 100%;
@@ -70,7 +71,7 @@ button:hover {
   padding-top: 50px;
 }
 
-.modal-content {
+.modal-content-login {
   background-color: #fefefe;
   margin: 0% auto 15% auto;
   /* border: 1px solid #888; */
@@ -78,7 +79,7 @@ button:hover {
   box-shadow: 0 4px 8px 0 #58585833, 0 6px 20px 0 #e7e5e530;
   display: block;
   padding: 12px 46px 15px;
-  width: 50%;
+  width: 42%;
 }
 h1 {
   font-size: 29px;

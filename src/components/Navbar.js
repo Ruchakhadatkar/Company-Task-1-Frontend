@@ -17,8 +17,8 @@ const Navbar = () => {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">
-            Pizza's
+          <a class="navbar-brand" href="#" style={{fontWeight:"600", fontSize:"20px"}}>
+            Pizza App
           </a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">

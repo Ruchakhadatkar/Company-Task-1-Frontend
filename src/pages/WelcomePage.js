@@ -7,25 +7,39 @@ const WelcomePage = () => {
   const [isShow, setIsShow] = useState(null);
 
   return (
-    <div className="imgContainer">
-      <div className="forms-modal">
+    <div className="imgContainer" style={{ width: "100vw", height: "100%" }}>
+      <div className="forms-modal ">
         {isShow ? <Signuppage /> : isShow == null ? <></> : <LoginPage />}
-        <button
-          onClick={() => {
-            setIsShow(true);
-          }}
+        <div
+          className="btnContainer d-flex justify-content-center gap-3"
+          style={{ padding: "22rem 0px" }}
         >
-          Sign Up
-        </button>
-        <button
-          onClick={() => {
-            setIsShow(false);
-          }}
-        >
-          Log In
-        </button>
+          <a
+            className="btn btn-primary btn-lg mr-2 "
+            href="#"
+            role="button"
+            onClick={() => {
+              setIsShow(true);
+            }}
+            style={{ width: "10rem", fontWeight: "600" }}
+          >
+            Sign Up
+          </a>
+          <a
+            className="btn btn-primary btn-lg"
+            href="#"
+            role="button"
+            onClick={() => {
+              setIsShow(false);
+            }}
+            style={{ width: "10rem", fontWeight: "600" }}
+          >
+            Log In
+          </a>
+        </div>
       </div>
     </div>
+    // </div>
   );
 };
 

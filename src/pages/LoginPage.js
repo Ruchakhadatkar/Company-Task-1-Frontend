@@ -6,7 +6,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import validator from "validator";
 
-
 export const LoginPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -22,12 +21,12 @@ export const LoginPage = () => {
   };
   return (
     <div>
-      <div>
+      <div className="main-form">
         <form
           onSubmit={(e) => {
             handleSubmit(e);
           }}
-          className="modal-content"
+          className="modal-content-login"
         >
           <div className="container">
             <h1>Log In</h1>

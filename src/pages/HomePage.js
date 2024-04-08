@@ -13,14 +13,15 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <div className="cards mt-4 d-flex flex-wrap  justify-content-evenly ">
+      <div className="cards d-flex flex-wrap  justify-content-evenly  ">
         <div
-          class="card "
+          class="card m-2 mt-5 "
           style={{
             width: "18rem",
             height: "23rem",
             marginTop: "3.5rem",
             borderRadius: "4px",
+            cursor: "pointer",
           }}
         >
           <img
@@ -47,12 +48,13 @@ const HomePage = () => {
         </div>
 
         <div
-          class="card "
+          class="card m-2 mt-5 "
           style={{
             width: "18rem",
             height: "23rem",
             marginTop: "3.5rem",
             borderRadius: "4px",
+            cursor: "pointer",
           }}
         >
           <img
@@ -79,12 +81,13 @@ const HomePage = () => {
         </div>
 
         <div
-          class="card "
+          class="card m-2 mt-5 "
           style={{
             width: "18rem",
             height: "23rem",
             marginTop: "3.5rem",
             borderRadius: "4px",
+            cursor: "pointer",
           }}
         >
           <img
@@ -111,12 +114,13 @@ const HomePage = () => {
         </div>
 
         <div
-          class="card "
+          class="card m-2 mt-5 "
           style={{
             width: "18rem",
             height: "23rem",
             marginTop: "3.5rem",
             borderRadius: "4px",
+            cursor: "pointer",
           }}
         >
           <img
@@ -143,12 +147,13 @@ const HomePage = () => {
         </div>
 
         <div
-          class="card "
+          class="card m-2  mt-5"
           style={{
             width: "18rem",
             height: "23rem",
             marginTop: "3.5rem",
             borderRadius: "4px",
+            cursor: "pointer",
           }}
         >
           <img
@@ -175,12 +180,13 @@ const HomePage = () => {
         </div>
 
         <div
-          class="card "
+          class="card m-2 mt-5 "
           style={{
             width: "18rem",
             height: "23rem",
             marginTop: "3.5rem",
             borderRadius: "4px",
+            cursor: "pointer",
           }}
         >
           <img
@@ -207,12 +213,13 @@ const HomePage = () => {
         </div>
 
         <div
-          class="card "
+          class="card m-2 mt-5 "
           style={{
             width: "18rem",
             height: "23rem",
             marginTop: "3.5rem",
             borderRadius: "4px",
+            cursor: "pointer",
           }}
         >
           <img
@@ -226,6 +233,39 @@ const HomePage = () => {
           >
             <h5 class="card-title" style={{ fontWeight: "600" }}>
               Green Wave Pizza
+            </h5>
+
+            <a
+              href="#"
+              class="btn btn-primary"
+              style={{ width: "14rem", fontWeight: "600" }}
+            >
+              Add to cart
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="card m-2 mt-5 "
+          style={{
+            width: "18rem",
+            height: "23rem",
+            marginTop: "3.5rem",
+            borderRadius: "4px",
+            cursor: "pointer",
+          }}
+        >
+          <img
+            src={margherita}
+            class="card-img-top p-3 rounded"
+            style={{ height: "22rem" }}
+          />
+          <div
+            class="card-body"
+            style={{ paddingTop: "0px", textAlign: "center" }}
+          >
+            <h5 class="card-title" style={{ fontWeight: "600" }}>
+              Margherita Pizza
             </h5>
 
             <a
