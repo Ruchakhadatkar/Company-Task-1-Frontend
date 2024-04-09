@@ -135,15 +135,11 @@ hr {
 
   .modal-content-login {
     padding: 6px;
-    width: 95%;
+    width: 90%;
   }
   .container {
     padding: 4px;
   }
-
-  /* .modal-content {
-    width: 95%;
-  } */
 }
 
 @media screen and (max-width: 630px) {
@@ -160,13 +156,9 @@ hr {
 
   .modal-content-login {
     padding: 6px;
-    width: 95%;
+    width: 90%;
   }
   .container {
     padding: 4px;
   }
-
-  /* .modal-content {
-    width: 95%;
-  } */
 }
