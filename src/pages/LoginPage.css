@@ -79,7 +79,7 @@ button:hover {
   box-shadow: 0 4px 8px 0 #58585833, 0 6px 20px 0 #e7e5e530;
   display: block;
   padding: 12px 26px 15px;
-  width: 42%;
+  width: 43%;
 }
 h1 {
   font-size: 29px;
@@ -135,14 +135,15 @@ hr {
 
   .modal-content-login {
     padding: 6px;
+    width: 95%;
   }
   .container {
     padding: 4px;
   }
 
-  .modal-content {
+  /* .modal-content {
     width: 95%;
-  }
+  } */
 }
 
 @media screen and (max-width: 630px) {
@@ -159,12 +160,13 @@ hr {
 
   .modal-content-login {
     padding: 6px;
+    width: 95%;
   }
   .container {
     padding: 4px;
   }
 
-  .modal-content {
+  /* .modal-content {
     width: 95%;
-  }
+  } */
 }

@@ -56,12 +56,6 @@ export const LoginPage = () => {
             />
 
             <div className="clearfix">
-              {/* <button
-                  type="button"
-                  onClick={closeModal}
-                  className="cancelbtn"
-                >
-                </button> */}
               <button type="submit" className="loginpbtn">
                 Login
               </button>
