@@ -1,0 +1,11 @@
+@media screen and (max-width: 300px) {
+  .main-signup-btn,
+  .main-login-btn {
+    width: 100%;
+    display: block;
+  }
+
+  .btnContainer {
+    display: block;
+  }
+}

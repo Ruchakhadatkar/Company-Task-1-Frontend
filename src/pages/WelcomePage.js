@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import backgroundImg from "../Assets/backgrounImgPizza.jpg";
 import { Signuppage } from "./SignupPage";
 import { LoginPage } from "./LoginPage";
+import './WelcomePage.css'
 
 const WelcomePage = () => {
   const [isShow, setIsShow] = useState(null);
@@ -15,7 +16,7 @@ const WelcomePage = () => {
           style={{ padding: "22rem 0px" }}
         >
           <a
-            className="btn btn-primary btn-lg mr-2 "
+            className=" main-signup-btn btn btn-primary btn-lg mr-2 "
             href="#"
             role="button"
             onClick={() => {
@@ -26,7 +27,7 @@ const WelcomePage = () => {
             Sign Up
           </a>
           <a
-            className="btn btn-primary btn-lg"
+            className="main-login-btn btn btn-primary btn-lg"
             href="#"
             role="button"
             onClick={() => {

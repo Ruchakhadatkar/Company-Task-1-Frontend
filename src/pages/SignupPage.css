@@ -133,5 +133,47 @@ hr {
   .cancelbtn,
   .signupbtn {
     width: 100%;
+    margin: 6px;
+    /* padding: 0px; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* padding-right: 10px;
+    margin-right: 10px; */
+  }
+
+  .signupbtn{
+    height: 48px;
+  }
+
+  .modal-content-login{
+
+    padding: 2px;
+  }
+  .container{
+    padding: 2px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+    margin: 6px;
+    /* padding: 0px; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  .modal-content-login{
+
+    padding: 6px;
+  }
+  .container{
+    padding: 4px;
   }
 }
