@@ -126,4 +126,10 @@ hr {
   .loginpbtn {
     width: 100%;
   }
+
+  .modal-content-login{
+
+    padding: 0px;
+  }
+
 }
