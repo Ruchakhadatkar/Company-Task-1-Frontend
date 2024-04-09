@@ -146,6 +146,10 @@ hr {
     height: 48px;
   }
 
+  .modal-content{
+    width: 75%;
+  }
+
   .modal-content-login{
 
     padding: 2px;
@@ -167,6 +171,9 @@ hr {
     text-align: center;
     padding-right: 10px;
     margin-right: 10px;
+  }
+  .modal-content{
+    width: 75%;
   }
 
   .modal-content-login{

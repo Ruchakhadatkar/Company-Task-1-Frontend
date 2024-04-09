@@ -122,7 +122,6 @@ hr {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-
   .loginpbtn {
     width: 100%;
     margin: 6px;
@@ -134,19 +133,19 @@ hr {
     margin-right: 10px;
   }
 
-  .modal-content-login{
-
+  .modal-content-login {
     padding: 6px;
   }
-  .container{
+  .container {
     padding: 4px;
   }
 
+  .modal-content {
+    width: 75%;
+  }
 }
 
-
 @media screen and (max-width: 630px) {
-
   .loginpbtn {
     width: 100%;
     margin: 6px;
@@ -158,12 +157,14 @@ hr {
     margin-right: 10px;
   }
 
-  .modal-content-login{
-
+  .modal-content-login {
     padding: 6px;
   }
-  .container{
+  .container {
     padding: 4px;
   }
 
+  .modal-content {
+    width: 75%;
+  }
 }
