@@ -34,6 +34,10 @@ export const Signuppage = () => {
     toast.success("Account create successfully!");
   };
 
+  // const handleClose = () => {
+  //   navigate("/");
+  // };
+
   return (
     <div>
       <div className="main-form-signup">
@@ -119,7 +123,7 @@ export const Signuppage = () => {
             <div className="clearfix">
               <button
                 type="button"
-                // onClick={closeModal}
+                // onClick={handleClose()}
                 className="cancelbtn"
               >
                 Cancel
